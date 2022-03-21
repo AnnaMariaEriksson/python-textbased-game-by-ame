@@ -1,16 +1,18 @@
-# This is a sample Python script.
+def main():
+    def hello():
+        start_menu = '''
+        Hi there!
+        This is a textbased game in Python.
+        Or perhaps just a storyboard?
+        I don't know yet.
+        '''
+        return start_menu
+    def get_player_name():
+        player_name = input("What is your name?")
+        return f"Hello, {player_name}! Nice of you to join us."
+    
+    print(hello())
+    print(get_player_name())
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
