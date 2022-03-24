@@ -1,5 +1,6 @@
 class Dreamhouse:
-    def __init__(self, size, bedrooms, city, country, size_of_yard, floors, price, is_in_countryside = False, has_yard = False):
+    def __init__(self, size, bedrooms, city, country, size_of_yard, floors, price, is_in_countryside=False,
+                 has_yard=False):
         self.size = size
         self.bedrooms = bedrooms
         self.city = city
@@ -14,7 +15,7 @@ class Dreamhouse:
         description = f"Your dream house is at least {self.size} square meters big and has {self.bedrooms} bedrooms. It costs around {self.price} to buy or build (everything included, such as furniture). "
         if self.is_in_countryside:
             description += f"This dream house is not in a city, but in the countryside. "
-        if self.is_in_countryside == False:
+        if not self.is_in_countryside:
             description += f"Your dream house is in the city of {self.city}"
         description += f"The house has {self.floors} floors and is located in the country of {self.country}. "
         if self.has_yard:

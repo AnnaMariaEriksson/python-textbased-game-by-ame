@@ -41,8 +41,8 @@ def ask_question(question, validator=None):
 
 def create_pets(number_of_pets):
     list_of_pets = []
-
-    for pet in range(number_of_pets):
+    i = 0
+    while i < number_of_pets:
         print("Ok, you have pets. Let's add them, shall we?")
         name = ask_question("What is your pet's name?")
         age = ask_question("How old is your pet? (write it with a number)")
@@ -52,4 +52,29 @@ def create_pets(number_of_pets):
 
         new_pet = Pet(name, age, species, color, favorite_toy)
         list_of_pets.append(new_pet)
+        i += 1
     return list_of_pets
+
+
+def create_dreamhouse():
+    print("Now I have a very personal question to ask. What is the house of your dreams?")
+    size = ask_question("How large would it be? ")
+    bedrooms = ask_question("How many bedrooms? ")
+    city_or_countryside = ask_question("Will it be located in a city or in the countryside? ")
+    if 'city' in city_or_countryside:
+        city = city_or_countryside
+    else:
+        city = None
+        countryside = True
+    country = ask_question("What country will it be in? ")
+    has_yard = ask_question("Will it have a yard? ")
+    if 'yes' in has_yard:
+        has_yard = True
+        size_of_yard = ask_question("How big of a yard would you like to have? Answer in square meters")
+        floors = ask_question("How many floors? ")
+        price = ask_question("What would it cost to build or buy? Free is not an option here.")
+    else:
+        has_yard = False
+
+    dh = Dreamhouse(size, bedrooms, city, country, countryside, size_of_yard, floors, price, has_yard)
+    return dh
