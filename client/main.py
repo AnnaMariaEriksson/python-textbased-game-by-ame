@@ -2,6 +2,10 @@ from client.player import Player
 from methods import *
 import os
 
+p = create_new_player()
+dh = create_dreamhouse()
+pet = create_pets(int(p.number_of_pets))
+
 
 def main():
     def hello():
@@ -24,6 +28,9 @@ def main():
     press_enter()
     create_dreamhouse()
     press_enter()
+    presentation(p, dh, pet)
+    press_enter()
+    reading_letter(create_dreamhouse)
 
 
 if __name__ == '__main__':
