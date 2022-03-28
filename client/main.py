@@ -4,7 +4,6 @@ import os
 
 p = create_new_player()
 dh = create_dreamhouse()
-pet = create_pets(int(p.number_of_pets))
 
 
 def main():
@@ -27,8 +26,7 @@ def main():
     create_new_player()
     press_enter()
     create_dreamhouse()
-    press_enter()
-    presentation(p, dh, pet)
+    presentation(p, dh, p.pets)
     press_enter()
     reading_letter(create_dreamhouse)
 
